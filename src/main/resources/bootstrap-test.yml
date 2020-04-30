@@ -1,0 +1,13 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: encrypt-server
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: test
+      label: test

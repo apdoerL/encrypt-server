@@ -1,0 +1,21 @@
+#spring:
+#  application:
+#    name: encrypt-server
+#  cloud:
+#    config:
+#      name: encrypt-server
+#      profile: dev                         #对应{profile}部分
+#      uri: http://localhost:9090        #配置中心的具体地址
+#      label: dev                        #对应git的分支。如果配置中心使用的是本地存储，则该参数无用
+#      discovery:
+#        service-id: config-server
+spring:
+  application:
+    name: encrypt-server
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: dev
+      label: dev
